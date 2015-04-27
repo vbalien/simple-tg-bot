@@ -3,9 +3,6 @@ import subprocess
 import re
 from threading import Thread
 
-import sys
-import codecs
-
 class TGBot(object):
     __autoread__ = False
 
