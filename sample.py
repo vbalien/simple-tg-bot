@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 import shlex, datetime
 from tgbot import TGBot
@@ -71,7 +71,7 @@ class myTGBot(TGBot):
                 args[0] = args[0].replace('애니', '')
                 args[0] = args[0].replace('목록', '')
             days = {'일요일' : 0, '월요일' : 1, '화요일' : 2, '수요일' : 3, '목요일' : 4, '금요일' : 5, '토요일' : 6,
-                '그제' : (daynum - 2)%7, '어제' : (daynum - 1)%7, '오늘' : daynum,
+                '그제' : (daynum - 2)%7, '어제' : (daynum - 1)%7, '오늘' : daynum%7,
                 '내일' : (daynum + 1)%7, '모레' : (daynum + 2)%7,'글피' : (daynum + 3)%7}
             if(args[0] in days):
                 msg = args[0]+' 애니입니다.\n--------------------------------\n'
